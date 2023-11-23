@@ -16,6 +16,8 @@ public class StudentController implements UserController<Student>{
     private final StudentGroupService studentGroupService = new StudentGroupService();
     private final StudentView studentView = new StudentView();
 
+    //region разнести согласно принципа единственной ответственности
+
     @Override
     public void create(String firstName, String secondName, String patronymic, LocalDate dateOfBirth) {
         dataService.create(firstName, secondName, patronymic, dateOfBirth);
@@ -41,4 +43,5 @@ public class StudentController implements UserController<Student>{
         List<Student> students = studentGroupService.getSortedByFIOStudentGroup();
         studentView.sendOnConsole(students);
     }
+    //endregion
 }

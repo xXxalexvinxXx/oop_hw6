@@ -57,6 +57,7 @@ public class User {
                '}';
     }
 
+    //region перенести согласно принципа единственной ответственности
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -83,4 +84,5 @@ public class User {
         return getDateOfBirth() != null ? getDateOfBirth().equals(user.getDateOfBirth()) :
                 user.getDateOfBirth() == null;
     }
+    //endregion
 }
