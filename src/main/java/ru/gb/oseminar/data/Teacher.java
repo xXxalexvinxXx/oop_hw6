@@ -19,12 +19,11 @@ public class Teacher extends User{
         this.teacherId = teacherId;
     }
 
-    //region перенести согласно единственной ответственности
     public static class TeacherComparator implements Comparator {
         @Override
         public int compare(Object o1, Object o2) {
             return 0;
         }
     }
-    //endregion
+
 }

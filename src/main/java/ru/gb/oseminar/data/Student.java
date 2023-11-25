@@ -35,7 +35,7 @@ public class Student extends User implements Comparable<Student>{
                '}';
     }
 
-    //region Перенести согласно единственной ответственности
+    //region Использовать UserComparator (принцип единсвенной ответственности)
     @Override
     public int compareTo(Student o) {
         return this.studentId.compareTo(o.studentId);

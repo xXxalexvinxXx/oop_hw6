@@ -5,7 +5,6 @@ import ru.gb.oseminar.data.StudentGroup;
 
 import java.util.List;
 import java.util.logging.Logger;
-//region создать универсальный view для любого типа пользователя
 public class StudentView implements UserView<Student>{
 
     Logger logger = Logger.getLogger(StudentView.class.getName());
@@ -16,13 +15,10 @@ public class StudentView implements UserView<Student>{
             logger.info(user.toString());
         }
     }
-    //endregion
 
-
-    //region перенести в новый метод вывода группы студентов
     public void sendOnConsoleUserGroup(StudentGroup studentGroup){
         logger.info(studentGroup.toString());
     }
-    //endregion
+
 
 }
